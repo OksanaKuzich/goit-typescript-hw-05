@@ -18,4 +18,14 @@ function compare(top, bottom) {
 function merge(objA, objB) {
     return Object.assign(objA, objB);
 }
+class Component {
+    constructor(props) {
+        this.props = props;
+    }
+}
+class Page extends Component {
+    pageInfo() {
+        console.log(this.props.title);
+    }
+}
 //# sourceMappingURL=app.js.map

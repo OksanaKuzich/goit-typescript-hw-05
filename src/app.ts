@@ -33,3 +33,18 @@ function compare(
 function merge<T extends object, U extends object>(objA: T, objB: U) {
   return Object.assign(objA, objB);
 }
+
+// #4 Только добавляя дженерики для классов и интерфейс уберите ошибку.
+class Component<T> {
+  constructor(public props: T) {}
+}
+
+interface IProps {
+  title: string;
+}
+
+class Page extends Component<IProps> {
+  pageInfo(): void {
+    console.log(this.props.title);
+  }
+}
